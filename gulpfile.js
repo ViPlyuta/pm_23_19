@@ -10,7 +10,7 @@ const browserSync = require('browser-sync').create();
 
 // HTML
 function htmlTask() {
-  return src('app/*.html')
+    return src('app/html/*.html')
     .pipe(fileInclude())
     .pipe(dest('dist'))
     .pipe(browserSync.stream());
@@ -50,7 +50,7 @@ function serve() {
       baseDir: 'dist'
     }
   });
-  watch('app/*.html', htmlTask);
+  watch('app/html/*.html', htmlTask);
   watch('app/scss/*.scss', scssTask);
   watch('app/js/*.js', jsTask);
   watch('app/img/*', imgTask);
