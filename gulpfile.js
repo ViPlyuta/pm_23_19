@@ -37,11 +37,12 @@ function jsTask() {
 
 // IMAGES
 function imgTask() {
-  return src('app/img/*')
+  return src('app/img/**/*', { encoding: false })
     .pipe(imagemin())
     .pipe(dest('dist/imgs'))
     .pipe(browserSync.stream());
 }
+
 
 // SERVE
 function serve() {

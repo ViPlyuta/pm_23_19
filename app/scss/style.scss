@@ -1,90 +1,116 @@
-// Загальні стилі
+/* ЗМІННІ */
+$primary-color: #f1c30f;
+$dark-bg: #2d2d2d;
+$light-bg: #ffffff;
+$text-color-dark: #333333;
+$text-color-light: #ffffff;
+$grey-text: #6c757d;
+$border-color: #e0e0e0;
+$font-family: 'Poppins', sans-serif;
+
+/* ЗАГАЛЬНІ СТИЛІ */
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: $font-family;
     background-color: #f0f0f0;
-    color: #444;
+    color: $text-color-dark;
     margin: 0;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    padding: 0;
+    font-size: 14px;
+    line-height: 1.6;
 }
 
 .resume {
     display: flex;
-    width: 900px;
-    background: #fff;
-    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    max-width: 900px;
+    margin: 50px auto;
+    background: $light-bg;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
 }
 
-// Ліва колонка
-.left-column {
-    background-color: #343a40;
-    color: #fff;
-    width: 35%;
-    padding: 30px;
+.section h2 {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 5px;
 
-    h2 {
-        color: #ffc107;
-        border-bottom: 2px solid #ffc107;
-        padding-bottom: 5px;
-        margin-top: 20px;
-        font-size: 1.2em;
-        display: flex;
-        align-items: center;
-    }
-    
     .icon {
         margin-right: 10px;
+        color: $primary-color;
     }
 }
 
-.photo-container {
-    text-align: center;
-    padding-bottom: 20px;
-}
+/* ЛІВА КОЛОНКА */
+.left-column {
+    background-color: $dark-bg;
+    color: $text-color-light;
+    width: 35%;
+    padding: 30px 20px;
 
-.profile-photo {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 5px solid #ffc107;
-}
-
-.contact-info p {
-    margin: 5px 0;
-    display: flex;
-    align-items: center;
+    .section {
+        margin-bottom: 30px;
+    }
     
-    i {
-        margin-right: 10px;
-        width: 20px;
-        text-align: center;
-    }
-}
-
-.section {
-    margin-bottom: 25px;
-
     .item {
-        margin-bottom: 15px;
+        margin-bottom: 20px;
+        padding-left: 0;
+        
+        h4, p { margin-bottom: 5px; }
+        
+        &.timeline-item {
+            position: relative;
+            padding-left: 20px;
+            
+            &::before { // Створює коло в таймлайні
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 5px;
+                width: 10px;
+                height: 10px;
+                background-color: $primary-color;
+                border-radius: 50%;
+            }
+             &::after { // Створює лінію в таймлайні
+                content: '';
+                position: absolute;
+                left: 4px;
+                top: 15px;
+                width: 2px;
+                height: calc(100% - 10px);
+                background-color: $primary-color;
+            }
+            &:last-child::after {
+                display: none;
+            }
+        }
     }
-
-    h4 {
-        margin: 0 0 5px 0;
-        color: #ffc107;
-    }
-
+    
     .date {
-        font-size: 0.9em;
-        font-style: italic;
+        font-size: 12px;
+        font-weight: 300;
+        background-color: $primary-color;
+        color: $dark-bg;
+        display: inline-block;
+        padding: 0 5px;
         margin-bottom: 5px;
     }
     
     .description {
-        font-size: 0.9em;
-        line-height: 1.4;
+        color: #ddd;
     }
+}
+
+.photo-container {
+    padding: 5px;
+    border: 5px solid $primary-color;
+    margin: 0 auto 30px;
+}
+
+.profile-photo {
+    width: 100%;
+    display: block;
 }
 
 .language p {
@@ -94,82 +120,162 @@ body {
 .progress-bar {
     background: #555;
     border-radius: 5px;
-    height: 10px;
+    height: 8px;
     
     .progress {
-        background: #ffc107;
+        background: $primary-color;
         height: 100%;
         border-radius: 5px;
     }
 }
 
 
-// Права колонка
+/* ПРАВА КОЛОНКА */
 .right-column {
     width: 65%;
     padding: 40px;
 }
 
 .header {
-    background-color: #ffc107;
-    padding: 20px;
-    margin-bottom: 30px;
-    margin-left: -40px; /* Вирівнювання по краю */
-    padding-left: 40px;
+    background-color: $primary-color;
+    padding: 30px;
+    margin: -40px -40px 30px -40px;
+    color: $dark-bg;
 
     h1 {
         margin: 0;
-        font-size: 2.5em;
-        font-weight: 900;
-        color: #343a40;
+        font-size: 36px;
+        font-weight: 700;
     }
 
     p {
         margin: 5px 0 0;
         font-size: 1.2em;
-        color: #343a40;
+    }
+    
+    .quote {
+        margin-top: 20px;
+        border-left: 3px solid $dark-bg;
+        padding-left: 15px;
+        font-style: italic;
+    }
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid $border-color;
+    font-size: 12px;
+    
+    span {
+        display: flex;
+        align-items: center;
+    }
+
+    i {
+        color: $primary-color;
+        margin-right: 8px;
     }
 }
 
 .right-column .section h2 {
-    color: #343a40;
-    font-size: 1.4em;
-    border-bottom: 2px solid #343a40;
-    padding-bottom: 5px;
-    display: flex;
-    align-items: center;
+    color: $text-color-dark;
+
+    &::after { // Декоративна лінія під заголовком
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 40px;
+        height: 3px;
+        background-color: $primary-color;
+    }
 }
 
 .job-item {
+    display: flex;
     margin-bottom: 20px;
+}
 
-    .date {
-        font-weight: bold;
-        color: #555;
+.job-date {
+    width: 100px;
+    font-weight: 600;
+    color: $grey-text;
+    padding-right: 20px;
+    flex-shrink: 0;
+    position: relative;
+    text-align: right;
+    padding-top: 2px;
+}
+
+.job-details {
+    border-left: 3px solid $primary-color;
+    padding-left: 20px;
+    position: relative;
+    
+    &::before { // Коло для таймлайну досвіду
+        content: '';
+        position: absolute;
+        left: -8px;
+        top: 5px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: $primary-color;
+        border: 2px solid $light-bg;
     }
 
     h4 {
-        margin: 5px 0;
-        color: #343a40;
-    }
-
-    p {
-        line-height: 1.6;
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: 600;
+        margin: 0;
     }
 }
 
-.skills-section, .hobbies-section {
-    .skills, .hobbies {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 15px;
-        margin-top: 15px;
+.dual-section {
+    display: flex;
+    gap: 30px;
+    .section {
+        width: 50%;
+    }
+}
+
+.skills-section .progress-bar {
+    background-color: #e0e0e0;
+}
+
+.hobbies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.hobby-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80px;
+    text-align: center;
+    font-size: 13px;
+
+    i {
+        font-size: 24px;
+        color: $primary-color;
+        margin-bottom: 5px;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        border: 1px solid $border-color;
+        border-radius: 50%;
+        transition: all 0.3s ease;
     }
 
-    .skill-item, .hobby-item {
-        background: #f0f0f0;
-        padding: 8px 12px;
-        border-radius: 5px;
-        font-size: 0.9em;
+    &:hover i {
+        background-color: $primary-color;
+        color: $dark-bg;
     }
 }
