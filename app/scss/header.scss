@@ -1,0 +1,45 @@
+/* HEADER */
+.header {
+    background-color: $primary-color;
+    padding: $base-padding;
+    margin: -40px -40px 30px -40px;
+    color: $dark-bg;
+
+    h1 {
+        margin: 0;
+        font-size: 36px;
+        font-weight: 700;
+    }
+
+    p {
+        margin: 5px 0 0;
+        font-size: 1.2em;
+    }
+    
+    .quote {
+        margin-top: 20px;
+        border-left: 3px solid $dark-bg;
+        padding-left: 15px;
+        font-style: italic;
+    }
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid $border-color;
+    font-size: 12px;
+    
+    span {
+        display: flex;
+        align-items: center;
+    }
+
+    i {
+        color: $primary-color;
+        margin-right: 8px;
+    }
+}

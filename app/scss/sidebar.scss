@@ -1,0 +1,87 @@
+/* ЛІВА КОЛОНКА (SIDEBAR) */
+.left-column {
+    background-color: $dark-bg;
+    color: $text-color-light;
+    width: 35%;
+    padding: $base-padding 20px;
+
+    .section {
+        margin-bottom: 30px;
+    }
+    
+    .item {
+        margin-bottom: 20px;
+        padding-left: 0;
+        
+        h4, p { margin-bottom: 5px; }
+        
+        &.timeline-item {
+            position: relative;
+            padding-left: 20px;
+            
+            &::before { // Створює коло в таймлайні
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 5px;
+                width: 10px;
+                height: 10px;
+                background-color: $primary-color;
+                border-radius: 50%;
+            }
+             &::after { // Створює лінію в таймлайні
+                content: '';
+                position: absolute;
+                left: 4px;
+                top: 15px;
+                width: 2px;
+                height: calc(100% - 10px);
+                background-color: $primary-color;
+            }
+            &:last-child::after {
+                display: none;
+            }
+        }
+    }
+    
+    .date {
+        font-size: 12px;
+        font-weight: 300;
+        background-color: $primary-color;
+        color: $dark-bg;
+        display: inline-block;
+        padding: 0 5px;
+        margin-bottom: 5px;
+    }
+    
+    .description {
+        color: #ddd;
+    }
+}
+
+.photo-container {
+    padding: 5px;
+    border: 5px solid $primary-color;
+    margin: 0 auto 30px;
+}
+
+.profile-photo {
+    width: 100%;
+    display: block;
+}
+
+.language p {
+    margin: 10px 0 5px;
+}
+
+.progress-bar {
+    background: #555;
+    border-radius: 5px;
+    height: 8px;
+    
+    .progress {
+        background: $primary-color;
+        height: 100%;
+        border-radius: 5px;
+    }
+}

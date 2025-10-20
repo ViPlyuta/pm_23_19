@@ -16,22 +16,21 @@ function htmlTask() {
     .pipe(browserSync.stream());
 }
 
-// SCSS
 function scssTask() {
-  return src('app/scss/*.scss')
+  return src('app/scss/main.scss', { sourcemaps: true }) 
     .pipe(sass())
     .pipe(cssnano())
-    .pipe(rename({ suffix: '.min' }))
-    .pipe(dest('dist/css'))
+    .pipe(rename('index.min.css')) 
+    .pipe(dest('dist/css', { sourcemaps: '.' }))
     .pipe(browserSync.stream());
 }
 
 // JS
 function jsTask() {
-  return src('app/js/*.js')
+  return src('app/js/*.js', { sourcemaps: true })
     .pipe(concat('script.min.js'))
     .pipe(uglify())
-    .pipe(dest('dist/js'))
+    .pipe(dest('dist/js', { sourcemaps: '.' }))
     .pipe(browserSync.stream());
 }
 
@@ -51,8 +50,8 @@ function serve() {
       baseDir: 'dist'
     }
   });
-  watch('app/html/*.html', htmlTask);
-  watch('app/scss/*.scss', scssTask);
+  watch('app/html/**/*.html', htmlTask);
+  watch('app/scss/**/*.scss', scssTask);
   watch('app/js/*.js', jsTask);
   watch('app/img/*', imgTask);
 }
@@ -62,3 +61,4 @@ const build = parallel(htmlTask, scssTask, jsTask, imgTask);
 
 exports.default = build;
 exports.serve = series(build, serve);
+exports.default = build;
