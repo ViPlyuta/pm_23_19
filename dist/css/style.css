@@ -1,0 +1,255 @@
+@charset "UTF-8";
+/* ЗМІННІ */
+/* ЗАГАЛЬНІ СТИЛІ */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f0f0f0;
+  color: #333333;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.resume {
+  display: flex;
+  max-width: 900px;
+  margin: 50px auto;
+  background: #ffffff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 5px;
+}
+.section h2 .icon {
+  margin-right: 10px;
+  color: #f1c30f;
+}
+
+/* ЛІВА КОЛОНКА */
+.left-column {
+  background-color: #2d2d2d;
+  color: #ffffff;
+  width: 35%;
+  padding: 30px 20px;
+}
+.left-column .section {
+  margin-bottom: 30px;
+}
+.left-column .item {
+  margin-bottom: 20px;
+  padding-left: 0;
+}
+.left-column .item h4, .left-column .item p {
+  margin-bottom: 5px;
+}
+.left-column .item.timeline-item {
+  position: relative;
+  padding-left: 20px;
+}
+.left-column .item.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 10px;
+  height: 10px;
+  background-color: #f1c30f;
+  border-radius: 50%;
+}
+.left-column .item.timeline-item::after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 15px;
+  width: 2px;
+  height: calc(100% - 10px);
+  background-color: #f1c30f;
+}
+.left-column .item.timeline-item:last-child::after {
+  display: none;
+}
+.left-column .date {
+  font-size: 12px;
+  font-weight: 300;
+  background-color: #f1c30f;
+  color: #2d2d2d;
+  display: inline-block;
+  padding: 0 5px;
+  margin-bottom: 5px;
+}
+.left-column .description {
+  color: #ddd;
+}
+
+.photo-container {
+  padding: 5px;
+  border: 5px solid #f1c30f;
+  margin: 0 auto 30px;
+}
+
+.profile-photo {
+  width: 100%;
+  display: block;
+}
+
+.language p {
+  margin: 10px 0 5px;
+}
+
+.progress-bar {
+  background: #555;
+  border-radius: 5px;
+  height: 8px;
+}
+.progress-bar .progress {
+  background: #f1c30f;
+  height: 100%;
+  border-radius: 5px;
+}
+
+/* ПРАВА КОЛОНКА */
+.right-column {
+  width: 65%;
+  padding: 40px;
+}
+
+.header {
+  background-color: #f1c30f;
+  padding: 30px;
+  margin: -40px -40px 30px -40px;
+  color: #2d2d2d;
+}
+.header h1 {
+  margin: 0;
+  font-size: 36px;
+  font-weight: 700;
+}
+.header p {
+  margin: 5px 0 0;
+  font-size: 1.2em;
+}
+.header .quote {
+  margin-top: 20px;
+  border-left: 3px solid #2d2d2d;
+  padding-left: 15px;
+  font-style: italic;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #e0e0e0;
+  font-size: 12px;
+}
+.contact-info span {
+  display: flex;
+  align-items: center;
+}
+.contact-info i {
+  color: #f1c30f;
+  margin-right: 8px;
+}
+
+.right-column .section h2 {
+  color: #333333;
+}
+.right-column .section h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background-color: #f1c30f;
+}
+
+.job-item {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.job-date {
+  width: 100px;
+  font-weight: 600;
+  color: #6c757d;
+  padding-right: 20px;
+  flex-shrink: 0;
+  position: relative;
+  text-align: right;
+  padding-top: 2px;
+}
+
+.job-details {
+  border-left: 3px solid #f1c30f;
+  padding-left: 20px;
+  position: relative;
+}
+.job-details::before {
+  content: "";
+  position: absolute;
+  left: -8px;
+  top: 5px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #f1c30f;
+  border: 2px solid #ffffff;
+}
+.job-details h4 {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.dual-section {
+  display: flex;
+  gap: 30px;
+}
+.dual-section .section {
+  width: 50%;
+}
+
+.skills-section .progress-bar {
+  background-color: #e0e0e0;
+}
+
+.hobbies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.hobby-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80px;
+  text-align: center;
+  font-size: 13px;
+}
+.hobby-item i {
+  font-size: 24px;
+  color: #f1c30f;
+  margin-bottom: 5px;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border: 1px solid #e0e0e0;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+.hobby-item:hover i {
+  background-color: #f1c30f;
+  color: #2d2d2d;
+}
