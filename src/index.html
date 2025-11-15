@@ -23,36 +23,16 @@
   <!--<link rel="stylesheet" href="styles/main.css">-->
   <link href="css/style.css" rel="stylesheet">
    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-  <!--<style>
-    body {
-      font-family: 'Inter', sans-serif;
-      scroll-behavior: smooth;
-      background-color: #e5e7eb;
-    }
-    .bg-custom-dark { background-color: #232323; }
-    .bg-custom-yellow { background-color: #FFCB2F; }
-    .text-custom-yellow { color: #FFCB2F; }
-    .border-custom-yellow { border-color: #FFCB2F; }
-    .vertical-text {
-      writing-mode: vertical-rl;
-      transform: rotate(180deg);
-      line-height: 0.7;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-  </style>-->
 </head>
 <body>
 <div class="container my-5">
-  <div class="row g-4 bg-white shadow-lg rounded overflow-hidden" style="">
+  <div class="row g-4 bg-white shadow-lg rounded overflow-hidden">
 
     <!-- ЛІВА КОЛОНКА -->
     <aside class="col-md-4 bg-custom-dark text-light p-4" style="z-index:2" >
       <div class="text-center mb-4">
         <div class="image-container">
-        <img src="img/profile.jpg" class="img-fluid rounded" alt="Фото профілю">
+        <img src="img/profile.jpg" class="img-fluid " style="width: 270px;" alt="Фото профілю">
         </div>
       </div>
 
@@ -68,7 +48,7 @@
   </h2>
 </div>
 
-<hr style="width: 50%; height: 3px; background-color: gray; border: none; opacity:1; margin: 0 0 2rem 0;">
+<hr style="width: 300px; height: 3px; background-color: gray; border: none; opacity:1; margin: 0 0 2rem 0;">
 
 
         <div class="d-flex mb-3">
@@ -78,7 +58,7 @@
           <div>
             <h3 class="h6 fst-italic fw-bold">Stanford University</h3>
             <h4 class="h6 fw-bold text-white">MASTER DEGREE</h4>
-            <p class="small text-justify" style="color: #d3d3d3;">
+            <p class="small" style="color: #d3d3d3; text-align: justify;">
               Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknow printer took a galley of type.
             </p>
           </div>
@@ -91,7 +71,7 @@
           <div>
             <h3 class="h6 fst-italic fw-bold">Chicago University</h3>
             <h4 class="h6 fw-bold text-white">BACHELOR DEGREE</h4>
-            <p class="small  text-justify" style="color: #d3d3d3;">
+            <p class="small" style="color: #d3d3d3; text-align: justify;">
               Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknow printer took a galley of type.
             </p>
           </div>
@@ -110,17 +90,17 @@
   </h2>
 </div>
 
-<hr style="width: 50%; height: 3px; background-color: gray; border: none; opacity:1; margin: 0 0 2rem 0;">
+<hr style="width: 300px; height: 3px; background-color: gray; border: none; opacity:1; margin: 0 0 2rem 0;">
 
         <div class="mb-3">
           <h3 class="h6 fw-bold">DARWIN B. MAGANA</h3>
-          <p class="text-custom-yellow small fw-semibold mb-0">2813 Shobe Lane Mancos, CO.</p>
+          <p class="text-custom-yellow small fw-semibold fst-italic mb-0">2813 Shobe Lane Mancos, CO.</p>
           <p class="small text-light mb-0">Tel: +1-970-533-3393</p>
           <p class="small text-light mb-0">Email: www.yourwebsite.com</p>
         </div>
         <div class="mb-3">
           <h3 class="h6 fw-bold">ROBERT J. BELVIN</h3>
-          <p class="text-custom-yellow small fw-semibold mb-0">2119 Fairfax Drive Newark, NJ.</p>
+          <p class="text-custom-yellow small fw-semibold fst-italic mb-0">2119 Fairfax Drive Newark, NJ.</p>
           <p class="small text-light mb-0">Tel: +1-908-987-5103</p>
           <p class="small text-light mb-0">Email: www.yourwebsite.com</p>
         </div>
@@ -157,32 +137,44 @@
   <div class="d-flex align-items-center mb-3" style="gap: 10px; padding-left: 15px;">
     <div style="width:10px;height:10px;background-color:#ffc107;"></div>
     <span style="width:100px;font-weight:500;color:white;font-size:0.85rem;">French</span>
-    <div style="flex-grow:1; height:6px; max-width:120px; background-color:#343a40;">
-      <div style="width:70%; height:100%; background-color:#ffc107;"></div>
+    <!--<div style="flex-grow:1; height:6px; max-width:120px; background-color:#343a40;">
+      <div style="width:70%; height:100%; background-color:#ffc107;"></div>-->
+      <div class="progress" style="flex-grow:1; height:6px; max-width:120px; background-color:#343a40;border-radius: 0px;">
+  <div class="progress-bar" role="progressbar" style="width: 70%;background-color:#ffc107;border-radius: 0px; " aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+
     </div>
   </div>
 
   <div class="d-flex align-items-center mb-3" style="gap: 10px; padding-left: 15px;">
     <div style="width:10px;height:10px;background-color:#ffc107;"></div>
     <span style="width:100px;font-weight:500;color:white;font-size:0.85rem;">Spanish</span>
-    <div style="flex-grow:1; height:6px; max-width:120px; background-color:#343a40;">
-      <div style="width:80%; height:100%; background-color:#ffc107;"></div>
+    <!--<div style="flex-grow:1; height:6px; max-width:120px; background-color:#343a40;">
+      <div style="width:80%; height:100%; background-color:#ffc107;"></div>-->
+      <div class="progress" style="flex-grow:1; height:6px; max-width:120px; background-color:#343a40;border-radius: 0px;">
+  <div class="progress-bar" role="progressbar" style="width: 80%;background-color:#ffc107;border-radius: 0px; " aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+
     </div>
   </div>
 
   <div class="d-flex align-items-center mb-3" style="gap: 10px; padding-left: 15px;">
     <div style="width:10px;height:10px;background-color:#ffc107;"></div>
     <span style="width:100px;font-weight:500;color:white;font-size:0.85rem;">German</span>
-    <div style="flex-grow:1; height:6px; max-width:120px; background-color:#343a40;">
-      <div style="width:60%; height:100%; background-color:#ffc107;"></div>
+    <!--<div style="flex-grow:1; height:6px; max-width:120px; background-color:#343a40;">
+      <div style="width:60%; height:100%; background-color:#ffc107;"></div>-->
+      <div class="progress" style="flex-grow:1; height:6px; max-width:120px; background-color:#343a40;border-radius: 0px;">
+  <div class="progress-bar" role="progressbar" style="width: 60%;background-color:#ffc107;border-radius: 0px; " aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+
     </div>
   </div>
 
   <div class="d-flex align-items-center mb-3" style="gap: 10px; padding-left: 15px;">
     <div style="width:10px;height:10px;background-color:#ffc107;"></div>
     <span style="width:100px;font-weight:500;color:white;font-size:0.85rem;">Arabic</span>
-    <div style="flex-grow:1; height:6px; max-width:120px; background-color:#343a40;">
-      <div style="width:85%; height:100%; background-color:#ffc107;"></div>
+    <!--<div style="flex-grow:1; height:6px; max-width:120px; background-color:#343a40;">
+      <div style="width:85%; height:100%; background-color:#ffc107;"></div>-->
+      <div class="progress" style="flex-grow:1; height:6px; max-width:120px; background-color:#343a40;border-radius: 0px;">
+  <div class="progress-bar" role="progressbar" style="width: 85%;background-color:#ffc107;border-radius: 0px; " aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+
     </div>
   </div>
 
@@ -195,7 +187,7 @@
     <main class="col-md-8 p-4">
       <!-- Про себе -->
       <section class="mb-4">
-        <p class="text-secondary small">
+        <p class="text-secondary small" style="text-align: justify;">
           Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
           when an unknown printer took a galley of type and scrambled it to make a type specimen book.
         </p>
@@ -209,10 +201,11 @@
       <div class="row mb-4 align-items-start">
         <div class="col-md-7">
           <div class="bg-custom-yellow p-4 rounded shadow text-black col-md-8" style=" position:absolute;left:0;z-index:1" >
-            <h1 class="display-5 fs-2 fw-black text-uppercase mb-0 fw-bold" style="padding-left:60%">Brian D.</h1>
-            <h1 class="display-5 fs-2 fw-medium text-uppercase" style="padding-left:60%">Paterson</h1>
-            <p class="fs-4 fw-semibold text-dark mt-2 fst-italic" style="padding-left:60%">Graphic & Web Designer</p>
-          </div>
+  <h1 class="text-uppercase" style="font-size:3rem; font-weight:900; padding-left:60%; margin:0;">Brian D.</h1>
+  <h1 class="text-uppercase" style="font-size:3rem; font-weight:400; padding-left:60%; margin-top:0; margin-bottom:0;">Paterson</h1>
+  <p class="text-dark fst-italic" style="font-size:1rem; letter-spacing:1.5px; padding-left:60%; margin-top:0; margin-bottom:0;">Graphic & Web Designer</p>
+</div>
+
         </div>
         <div class="col-md-5 contact-container">
           <div class="d-flex flex-column gap-3">
@@ -252,20 +245,24 @@
   </h2>
 </div>
 
-<hr style="width: 25%; height: 2px; background-color:#000; border: none; opacity:1; margin: 0 0 2rem 0;">
+<hr style="width: 710px; height: 2px; background-color:#000; border: none; opacity:1; margin: 0 0 2rem 0;">
 
 
         <div class="mb-3 d-flex">
-          <div class="me-2">
-            <div class="bg-custom-yellow vertical-text small fw-bold px-2 py-1">2021 - Present</div>
-          </div>
-          <div>
-            <h3 class="fw-bold text-dark">Creative Agency</h3>
-            <p class="small text-muted mb-0">Chicago</p>
-            <h4 class="fw-semibold mt-1">SENIOR WEB DESIGNER</h4>
-            <p class="small text-dark">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-               It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-          </div>
+  <div>
+    <div class="bg-custom-yellow vertical-text small fw-bold px-2 py-1">2021 - Present</div>
+  </div>
+  <div class="ms-4">
+    <h3 class="fst-italic fw-semibold mt-1" style="font-size: 1.25rem; margin-bottom: 0;">Creative Agency</h3>
+    <p class="sh6 fst-italic fw-semibold mb-0" style="color: #343a40;">Chicago</p>
+    <h4 class="fw-bold text-dark mt-0">SENIOR WEB DESIGNER</h4>
+    <p class="small text-dark" style="text-align: justify;">
+      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,<br>
+      when an unknown printer took a galley of type and scrambled it to make a type<br>
+      specimen book.It has survived not only five centuries, but also the leap into<br>
+      electronic typesetting, remaining essentially unchanged.
+    </p>
+ </div>
         </div>
 
         <div class="mb-3 d-flex">
@@ -273,12 +270,16 @@
             <div class="bg-custom-yellow vertical-text small fw-bold px-2 py-1">2018 - 2021</div>
           </div>
           <div class="ps-3 ">
-            <h3 class="fw-bold text-dark">Creative Market</h3>
-            <p class="small text-muted mb-0">United Kingdom</p>
-            <h4 class="fw-semibold mt-1">GRAPHIC DESIGNER</h4>
-            <p class="small text-dark">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-              It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-          </div>
+            <h3 class="fst-italic fw-semibold mt-1" style="font-size: 1.25rem; margin-bottom: 0;">Creative Market</h3>
+<p class="sh6 fst-italic fw-semibold mb-0" style="color: #343a40;">United Kingdom</p>
+<h4 class="fw-bold text-dark mt-0">GRAPHIC DESIGNER</h4>
+<p class="small text-dark" style="text-align: justify;">
+  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,<br>
+  when an unknown printer took a galley of type and scrambled it to make a type<br>
+  specimen book.It has survived not only five centuries, but also the leap into<br>
+  electronic typesetting, remaining essentially unchanged.
+</p>
+</div>
         </div>
 
         <div class="mb-3 d-flex">
@@ -286,12 +287,15 @@
             <div class="bg-custom-yellow vertical-text small fw-bold px-2 py-1">2015 - 2018</div>
           </div>
           <div class="ps-3 ">
-            <h3 class="fw-bold text-dark">Marketing Agency</h3>
-            <p class="small text-muted mb-0">United Kingdom</p>
-            <h4 class="fw-semibold mt-1">MARKETING MANAGER</h4>
-            <p class="small text-dark">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-              It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-          </div>
+            <h3 class="fst-italic fw-semibold mt-1" style="font-size: 1.25rem; margin-bottom: 0;">Marketing Agency</h3>
+            <p class="sh6 fst-italic fw-semibold mb-0" style="color: #343a40;">United Kingdom</p>
+            <h4 class="fw-bold text-dark">MARKETING MANAGER</h4>
+            <p class="small text-dark" style="text-align: justify;">
+  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,<br>
+  when an unknown printer took a galley of type and scrambled it to make a type<br>
+  specimen book.It has survived not only five centuries, but also the leap into<br>
+  electronic typesetting, remaining essentially unchanged.
+</p></div>
         </div>
 
         <div class="mb-3 d-flex">
@@ -299,12 +303,16 @@
             <div class="bg-custom-yellow vertical-text small fw-bold px-2 py-1">2013 - 2015</div>
           </div>
           <div class="ps-3 ">
-            <h3 class="fw-bold text-dark">Creative Agency</h3>
-            <p class="small text-muted mb-0">Chicago</p>
-            <h4 class="fw-semibold mt-1">JUNIOR WEB DESIGNER</h4>
-            <p class="small text-dark">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-              It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-          </div>
+            <h3 class="fst-italic fw-semibold mt-1" style="font-size: 1.25rem; margin-bottom: 0;">Creative Agency</h3>
+            <p class="sh6 fst-italic fw-semibold mb-0" style="color: #343a40;">Chicago</p>
+            <h4 class="fw-bold text-dark">JUNIOR WEB DESIGNER</h4>
+           <p class="small text-dark" style="text-align: justify;">
+  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,<br>
+  when an unknown printer took a galley of type and scrambled it to make a type<br>
+  specimen book.It has survived not only five centuries, but also the leap into<br>
+  electronic typesetting, remaining essentially unchanged.
+</p>
+ </div>
         </div>
       </section>
 
@@ -325,40 +333,55 @@
   <div class="d-flex align-items-center mb-3" style="gap: 6px;">
     <div style="width:10px;height:10px;background-color:#ffc107;"></div>
     <span style="width:180px;font-weight:700;color:#222;">Adobe Photoshop</span>
-    <div style="width:120px;height:0.5rem;background-color:#e9ecef;">
-      <div style="width:85%;height:0.5rem;background-color:#ffc107;"></div>
+    <!--div style="width:120px;height:0.5rem;background-color:#e9ecef;">
+      <div style="width:85%;height:0.5rem;background-color:#ffc107;"></div>-->
+      <div class="progress" style="flex-grow:1; height:6px; max-width:120px; background-color:#e9ecef;border-radius: 0px;">
+  <div class="progress-bar" role="progressbar" style="width: 85%;background-color:#ffc107;border-radius: 0px; " aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+
     </div>
   </div>
 
   <div class="d-flex align-items-center mb-3" style="gap: 6px;">
     <div style="width:10px;height:10px;background-color:#ffc107;"></div>
     <span style="width:180px;font-weight:700;color:#222;">Adobe Illustrator</span>
-    <div style="width:120px;height:0.5rem;background-color:#e9ecef;">
-      <div style="width:45%;height:0.5rem;background-color:#ffc107;"></div>
+    <!--<div style="width:120px;height:0.5rem;background-color:#e9ecef;">
+      <div style="width:45%;height:0.5rem;background-color:#ffc107;"></div>-->
+      <div class="progress" style="flex-grow:1; height:6px; max-width:120px; background-color:#e9ecef;border-radius: 0px;">
+  <div class="progress-bar" role="progressbar" style="width: 45%;background-color:#ffc107;border-radius: 0px; " aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+
     </div>
   </div>
 
   <div class="d-flex align-items-center mb-3" style="gap: 6px;">
     <div style="width:10px;height:10px;background-color:#ffc107;"></div>
     <span style="width:180px;font-weight:700;color:#222;">Microsoft Word</span>
-    <div style="width:120px;height:0.5rem;background-color:#e9ecef;">
-      <div style="width:70%;height:0.5rem;background-color:#ffc107;"></div>
+    <!--<div style="width:120px;height:0.5rem;background-color:#e9ecef;">
+      <div style="width:70%;height:0.5rem;background-color:#ffc107;"></div>-->
+      <div class="progress" style="flex-grow:1; height:6px; max-width:120px; background-color:#e9ecef;border-radius: 0px;">
+  <div class="progress-bar" role="progressbar" style="width: 70%;background-color:#ffc107;border-radius: 0px; " aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+
     </div>
   </div>
 
   <div class="d-flex align-items-center mb-3" style="gap: 6px;">
     <div style="width:10px;height:10px;background-color:#ffc107;"></div>
     <span style="width:180px;font-weight:700;color:#222;">Microsoft Powerpoint</span>
-    <div style="width:120px;height:0.5rem;background-color:#e9ecef;">
-      <div style="width:60%;height:0.5rem;background-color:#ffc107;"></div>
+    <!--<div style="width:120px;height:0.5rem;background-color:#e9ecef;">
+      <div style="width:60%;height:0.5rem;background-color:#ffc107;"></div>-->
+      <div class="progress" style="flex-grow:1; height:6px; max-width:120px; background-color:#e9ecef;border-radius: 0px;">
+  <div class="progress-bar" role="progressbar" style="width: 60%;background-color:#ffc107;border-radius: 0px; " aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+
     </div>
   </div>
 
   <div class="d-flex align-items-center mb-3" style="gap: 6px;">
     <div style="width:10px;height:10px;background-color:#ffc107;"></div>
     <span style="width:180px;font-weight:700;color:#222;">HTML-5/CSS-3</span>
-    <div style="width:120px;height:0.5rem;background-color:#e9ecef;">
-      <div style="width:85%;height:0.5rem;background-color:#ffc107;"></div>
+    <!--<div style="width:120px;height:0.5rem;background-color:#e9ecef;">
+      <div style="width:85%;height:0.5rem;background-color:#ffc107;"></div>-->
+      <div class="progress" style="flex-grow:1; height:6px; max-width:120px; background-color:#e9ecef;border-radius: 0px;">
+  <div class="progress-bar" role="progressbar" style="width: 85%;background-color:#ffc107;border-radius: 0px; " aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+
     </div>
   </div>
 
@@ -382,40 +405,55 @@
       <div class="d-flex align-items-center mb-3" style="gap: 6px;">
     <div style="width:10px;height:10px;background-color:#ffc107;"></div>
     <span style="width:180px;font-weight:700;color:#222;">Book Reading</span>
-    <div style="width:120px;height:0.5rem;background-color:#e9ecef;">
-      <div style="width:85%;height:0.5rem;background-color:#ffc107;"></div>
+    <!--<div style="width:120px;height:0.5rem;background-color:#e9ecef;">
+      <div style="width:85%;height:0.5rem;background-color:#ffc107;"></div>-->
+      <div class="progress" style="flex-grow:1; height:6px; max-width:120px; background-color:#e9ecef;border-radius: 0px;">
+  <div class="progress-bar" role="progressbar" style="width: 85%;background-color:#ffc107;border-radius: 0px; " aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+
     </div>
   </div>
 
   <div class="d-flex align-items-center mb-3" style="gap: 6px;">
     <div style="width:10px;height:10px;background-color:#ffc107;"></div>
     <span style="width:180px;font-weight:700;color:#222;">Travelling</span>
-    <div style="width:120px;height:0.5rem;background-color:#e9ecef;">
-      <div style="width:70%;height:0.5rem;background-color:#ffc107;"></div>
+    <!--<div style="width:120px;height:0.5rem;background-color:#e9ecef;">
+      <div style="width:70%;height:0.5rem;background-color:#ffc107;"></div>-->
+      <div class="progress" style="flex-grow:1; height:6px; max-width:120px; background-color:#e9ecef;border-radius: 0px;">
+  <div class="progress-bar" role="progressbar" style="width: 70%;background-color:#ffc107;border-radius: 0px; " aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+
     </div>
   </div>
 
   <div class="d-flex align-items-center mb-3" style="gap: 6px;">
     <div style="width:10px;height:10px;background-color:#ffc107;"></div>
     <span style="width:180px;font-weight:700;color:#222;">Playing Chess</span>
-    <div style="width:120px;height:0.5rem;background-color:#e9ecef;">
-      <div style="width:80%;height:0.5rem;background-color:#ffc107;"></div>
+    <!--<div style="width:120px;height:0.5rem;background-color:#e9ecef;">
+      <div style="width:80%;height:0.5rem;background-color:#ffc107;"></div>-->
+      <div class="progress" style="flex-grow:1; height:6px; max-width:120px; background-color:#e9ecef;border-radius: 0px;">
+  <div class="progress-bar" role="progressbar" style="width: 80%;background-color:#ffc107;border-radius: 0px; " aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+
     </div>
   </div>
 
   <div class="d-flex align-items-center mb-3" style="gap: 6px;">
     <div style="width:10px;height:10px;background-color:#ffc107;"></div>
     <span style="width:180px;font-weight:700;color:#222;">Graphic Design</span>
-    <div style="width:120px;height:0.5rem;background-color:#e9ecef;">
-      <div style="width:70%;height:0.5rem;background-color:#ffc107;"></div>
+    <!--<div style="width:120px;height:0.5rem;background-color:#e9ecef;">
+      <div style="width:70%;height:0.5rem;background-color:#ffc107;"></div>-->
+      <div class="progress" style="flex-grow:1; height:6px; max-width:120px; background-color:#e9ecef;border-radius: 0px;">
+  <div class="progress-bar" role="progressbar" style="width: 70%;background-color:#ffc107;border-radius: 0px; " aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+
     </div>
   </div>
 
   <div class="d-flex align-items-center" style="gap: 6px;">
     <div style="width:10px;height:10px;background-color:#ffc107;"></div>
     <span style="width:180px;font-weight:700;color:#222;">Painting</span>
-    <div style="width:120px;height:0.5rem;background-color:#e9ecef;">
-      <div style="width:40%;height:0.5rem;background-color:#ffc107;"></div>
+    <!--<div style="width:120px;height:0.5rem;background-color:#e9ecef;">
+      <div style="width:40%;height:0.5rem;background-color:#ffc107;"></div>-->
+      <div class="progress" style="flex-grow:1; height:6px; max-width:120px; background-color:#e9ecef;border-radius: 0px;">
+  <div class="progress-bar" role="progressbar" style="width: 40%;background-color:#ffc107;border-radius: 0px; " aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+
     </div>
   </div>
 
