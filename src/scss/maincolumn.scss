@@ -369,4 +369,176 @@ border-radius: 0px;
   line-height: 1.3;
 }
 
+.about {
+  margin-top: -28px; padding-left:5%;
+}
 
+.about1 {
+  font-family: 'Poppins', sans-serif; 
+  margin-bottom: 50px;
+  padding-left:5%;
+}
+
+.about2 {
+   position:absolute;left:0;z-index:1; width: 65%;
+  .style {
+   padding-left:62%;
+  }
+}
+
+.contacts {
+  margin-top: 20px;
+  .one {
+    border-bottom: 1px solid #000; 
+    padding-bottom: 0.5rem;
+  }
+  .two {
+    width:25px; 
+    height:25px;
+  }
+  .site {
+    border-bottom: 1px solid #000; 
+    padding-bottom: 0.5rem;
+  .site1 {
+  width:25px; 
+  height:25px;
+}}
+}
+
+.exp-job {
+  margin-top: 90px;
+  padding-left:6%;
+  .exp1{
+  width:32px; 
+  height:32px;
+  padding:0
+  }
+  .exp2{
+    margin-top: 0;
+  }
+  .exp3{
+    width: 100%; 
+    height: 2px; 
+    background-color:#000; 
+    border: none; 
+    opacity:1; 
+    margin: 0 0 2rem 0;
+  }
+  .first-ags {
+    margin-top: 10px;
+    .ags {
+      padding-left:2%;
+      margin-top: 10px;
+  }
+    .ags1 {
+      padding-left:2%;
+      margin-top: -10px;
+    }
+    .ags2 {
+      font-size: 18px;
+      padding-left:2%;
+      margin-top: -5px;
+    }
+    .ags3 {
+      padding-left:2%;
+    }
+}
+  .second {
+  margin-top: -10px;
+     .sec1 {
+      font-size: 18px;
+      margin-top: -5px;
+     }
+  }
+  .third {
+    margin-top: -20px;
+    .thrd1 {
+      margin-top: -5px;
+    }
+  }
+}
+
+.skillss {
+  padding-left:6%;
+  .skills1 {
+  border-bottom: 2px solid black;
+  width: 280px;
+  margin-top: -2rem;
+}
+  .skills2 {
+    width:32px; 
+    height:32px;
+    padding: 0;
+  }
+  .skills3 {
+    margin-top: 0.2rem;
+  }
+  .line {
+  font-family: 'Inter', sans-serif; 
+  line-height: 1.4; 
+  padding-left:0px;
+  padding: 0;
+  }
+}
+  .skill-sec {
+    gap: 5px;
+    margin-top: 35px;
+  }
+  .skill-sec1 {
+    gap: 5px;
+    .skill-sec2 {
+      width:10px;
+      height:10px;
+      background-color:#ffc107;
+    }
+    .skill-sec3 {
+      width:140px;
+      font-weight:700;
+      color:#222;
+    }
+    .progress {
+      flex-grow:1; 
+      height:6px; 
+      max-width:120px; 
+      background-color:#e9ecef;
+      border-radius: 0px;
+    }
+  }
+
+  .hobbies {
+    border-bottom: 2px solid black;
+    margin-top: -2rem;
+    .hobbies1 {
+      width:32px;
+      height:32px; 
+      padding: 0;
+    }
+    .hobbies2 {
+      margin-top: 0.2rem;
+    }
+  }
+    .hobbies-sec {
+      gap: 20px;
+      margin-top: 33px;
+    }
+        .hobbies-sec1 {
+          gap: 20px;
+          .hobbies-sec2{
+          width:10px;
+          height:10px;
+          background-color:#ffc107;
+          }
+          .hobbies-sec3 {
+            width:140px;
+            font-weight:700;
+            color:#222;
+          }
+          .progress {
+            flex-grow:1; 
+            height:6px; 
+            max-width:120px; 
+            background-color:#e9ecef;
+            border-radius: 0px;
+          }
+        }
+    

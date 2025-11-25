@@ -3,11 +3,13 @@
 .left-column {
   background-color: $dark-bg;
   color: $text-color-light;
-  width: 35%;
+  /*width: 35%;*/
   padding: 30px 20px;
+  z-index:2;
 
   .section {
     margin-bottom: 30px;
+    
   }
 
   .item {
@@ -113,22 +115,116 @@ border-radius: 0px;
 
 
 #english-progress{
-@include progress(90%);
+@include progress(100%-10%);
 
 }
 #french-progress{
-@include progress(70%);
+@include progress(100%-30%);
 }
 
 #spanish-progress{
-@include progress(80%);
+@include progress(100%-20%);
 }
 
 #german-progress{
-@include progress(60%);
+@include progress(100%-40%);
 }
 
 #arabic-progress{
-@include progress(85%);
+@include progress(100%-15%);
+}
+.languages {
+  font-family: 'Inter', sans-serif; 
+  line-height: 1.4;
+  margin-left: 30px;
+  .languages1 {
+    border-bottom: 2px solid white;
+    width: 260px;
+  }
+  .languages2 {
+    width:32px; 
+    height:32px; 
+    padding: 0;
+  }
+  .languages3 {
+    margin-top: 0.2rem;
+  }
+}
+.first-language{
+  margin-top: 35px;
+}
+.language-container{
+   gap: 15px;
+   .square{
+      width:10px;
+      height:10px;
+      background-color:#ffc107;
+   }
+   .label{
+width:100px;
+font-weight:500;
+color:white;
+font-size:0.85rem;
+   }
+.progress{
+flex-grow:1;
+height:6px;
+max-width:120px;
+background-color:#343a40;
+border-radius: 0px;
+
+}
 }
 
+
+
+
+
+.education-section {
+  margin-top: 45px;
+  margin-left: 30px;
+}
+
+.section-header {
+  border-bottom: 2px solid white;
+  width: 260px;
+}
+
+.icon-circle {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+}
+
+.section-title {
+  margin-top: 0;
+}
+
+.education-item {
+  display: flex;
+  column-gap: 25px;
+  margin-left: 30px;
+  margin-bottom: 1rem; // замість mb-3, можна залишити для точності
+}
+
+.education-date {
+  margin-top: 20px;
+}
+
+.edu-text {
+  color: #d3d3d3;
+}
+
+.edu-text2 {
+  column-gap: 25px;margin-left: 30px;
+}
+
+.edu-text3 {
+  margin-top: 0;
+}
+.reference-section {
+  margin-left: 30px;
+}
+.reference-contact {
+  margin-bottom: -5px;
+}

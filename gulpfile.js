@@ -4,6 +4,7 @@ const rename = require('gulp-rename');
 const browserSync = require('browser-sync').create();
 const { deleteAsync } = require('del');
 const imagemin = require('gulp-imagemin');
+const fileinclude = require('gulp-file-include');
 
 // --------------------------------
 // PATHS
@@ -12,6 +13,9 @@ const paths = {
     html: {
         src: 'src/index.html',
         dest: 'dist/'
+    },
+    components:{
+         src: 'src/components'
     },
     styles: {
         src: 'src/scss/**/*.scss',    // слідкуємо за всіма файлами SCSS
@@ -42,8 +46,18 @@ function clean() {
 }
 
 function html() {
-    return src(paths.html.src).pipe(dest(paths.html.dest));
+    //return src(paths.html.src).pipe(dest(paths.html.dest));
+    return src(paths.html.src) 
+    .pipe(fileinclude({
+      prefix: '@', 
+      basepath: paths.components.src 
+    }))
+    //.pipe(rename('index.html'))
+    .pipe(dest(paths.html.dest)); 
 }
+
+
+
 
 function styles() {
     return src(paths.styles.main)    // компілюємо тільки main.scss
@@ -80,6 +94,7 @@ function server() {
 
     watch(paths.styles.src, styles);          // слідкуємо за всіма scss
     watch(paths.html.src, html).on('change', browserSync.reload);
+     watch(paths.components.src, html).on('change', browserSync.reload);
     watch(paths.images.src, images).on('change', browserSync.reload);
 }
 
