@@ -5,6 +5,7 @@ const browserSync = require('browser-sync').create();
 const { deleteAsync } = require('del');
 const imagemin = require('gulp-imagemin');
 const fileinclude = require('gulp-file-include');
+const uglify = require('gulp-uglify');
 
 // --------------------------------
 // PATHS
@@ -16,6 +17,9 @@ const paths = {
     },
     components:{
          src: 'src/components'
+    },
+    js:{
+         src: 'src/js'
     },
     styles: {
         src: 'src/scss/**/*.scss',    // слідкуємо за всіма файлами SCSS
@@ -67,6 +71,18 @@ function styles() {
         .pipe(browserSync.stream());
 }
 
+
+
+// Таск для обработки JavaScript
+function scripts() {
+    return src('src/js/index.js')           // путь к вашему файлу index.js                   // минифицируем JS
+    .pipe(uglify())    
+    .pipe(rename('index.min.js'))       // переименовываем файл в index.min.js
+        .pipe(dest('dist/js/'))              // сохраняем результат в папку dist/js
+        .pipe(browserSync.stream());        // обновляем браузер при изменении
+}
+
+
 function images() {
     return src(paths.images.src, { encoding: false })
         .pipe(imagemin())
@@ -95,13 +111,14 @@ function server() {
     watch(paths.styles.src, styles);          // слідкуємо за всіма scss
     watch(paths.html.src, html).on('change', browserSync.reload);
      watch(paths.components.src, html).on('change', browserSync.reload);
+     watch(paths.js.src, scripts).on('change', browserSync.reload);
     watch(paths.images.src, images).on('change', browserSync.reload);
 }
 
 // --------------------------------
 // EXPORTS
 // --------------------------------
-const build = series(clean, parallel(html, styles, images, copyBootstrapCSS, copyBootstrapJS));
+const build = series(clean, parallel(html, styles, images, scripts, copyBootstrapCSS, copyBootstrapJS));
 
 exports.clean = clean;
 exports.build = build;
