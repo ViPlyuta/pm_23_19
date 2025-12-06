@@ -39,6 +39,10 @@ const paths = {
             src: 'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
             dest: 'dist/js/'
         }
+    },
+    dataJson:{
+        src: 'src/data/**/*.json',
+        dest: 'dist/'
     }
 };
 
@@ -98,6 +102,10 @@ function copyBootstrapJS() {
     return src(paths.bootstrap.js.src).pipe(dest(paths.bootstrap.js.dest));
 }
 
+function dataJson(){
+   return src(paths.dataJson.src).pipe(dest(paths.dataJson.dest))
+}
+
 // --------------------------------
 // SERVER + WATCH
 // --------------------------------
@@ -113,12 +121,13 @@ function server() {
      watch(paths.components.src, html).on('change', browserSync.reload);
      watch(paths.js.src, scripts).on('change', browserSync.reload);
     watch(paths.images.src, images).on('change', browserSync.reload);
+     watch(paths.dataJson.src, dataJson).on('change', browserSync.reload);
 }
 
 // --------------------------------
 // EXPORTS
 // --------------------------------
-const build = series(clean, parallel(html, styles, images, scripts, copyBootstrapCSS, copyBootstrapJS));
+const build = series(clean, parallel(html, styles, images, scripts, dataJson, copyBootstrapCSS, copyBootstrapJS));
 
 exports.clean = clean;
 exports.build = build;

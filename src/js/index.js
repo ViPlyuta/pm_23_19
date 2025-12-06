@@ -1,4 +1,4 @@
-const firstName = "Brian D.";
+/*const firstName = "Brian D.";
 const lastName = "Paterson";
 const jobExperienceAr = [{organization:"Creative Agency"
     ,time:"2021 - Present"
@@ -23,7 +23,7 @@ const jobExperienceAr = [{organization:"Creative Agency"
     ,city:"Chicago"
     ,post:"JUNIOR WEB DESIGNER",
     description:"Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
- }];
+ }];*/
 function createJobElement(data) {
     
     const container = document.createElement("div");
@@ -88,17 +88,44 @@ function createJobExperienceContent(jobExperienceAr){
     )
 }
 
-function setPersonName(firstName, lastName){
+function setPersonName(personNameInfo){
     let firstNameContainer = document.querySelector("#first-name");
     let lastNameContainer = document.querySelector("#last-name");
     console.log(firstNameContainer);
-    firstNameContainer.textContent=firstName;
-    lastNameContainer.textContent=lastName;
+    firstNameContainer.textContent=personNameInfo.firstName;
+    lastNameContainer.textContent=personNameInfo.lastName;
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-    setPersonName(firstName, lastName);
-    createJobExperienceContent(jobExperienceAr);
+    let responseError = false;
+    let responseStatus = 200
+    fetch('/data.json')
+    .then(response=>{
+        responseStatus = response.status;
+        if(response.ok){
+           return  response.json();
+        }
+        else{
+            responseError = true;
+            return response.text();
+        }
+    })
+    .then(data=>{
+        if(!responseError){
+            console.log(data)
+            let personNameInfo = data.personNameInfo;
+            let jobExperienceAr = data.jobExperience;
+            setPersonName(personNameInfo);
+            createJobExperienceContent(jobExperienceAr);
+        }
+        else{
+            alert('An error occurred while receiving data. Status:'+responseStatus)
+        }
+    }
+
+    )
+    /*setPersonName(firstName, lastName);
+    createJobExperienceContent(jobExperienceAr);*/
 
     // SKILLS 
     document.querySelector('#show-more-skills').addEventListener('click', function () {
