@@ -1,29 +1,3 @@
-/*const firstName = "Brian D.";
-const lastName = "Paterson";
-const jobExperienceAr = [{organization:"Creative Agency"
-    ,time:"2021 - Present"
-    ,city:"Chicago"
-    ,post:"SENIOR WEB DESIGNER",
-    description:"Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
- },
-{organization:"Creative Market"
-    ,time:"2018 - 2021"
-    ,city:"United Kingdom"
-    ,post:"GRAPHIC DESIGNER",
-    description:"Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
- },
-{organization:"Marketing Agency"
-    ,time:"2015 - 2018"
-    ,city:"United Kingdom"
-    ,post:"MARKETING MANAGER",
-    description:"Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
- },
-{organization:"Creative Agency"
-    ,time:"2013 - 2015"
-    ,city:"Chicago"
-    ,post:"JUNIOR WEB DESIGNER",
-    description:"Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
- }];*/
 function createJobElement(data) {
     
     const container = document.createElement("div");
@@ -124,8 +98,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     )
-    /*setPersonName(firstName, lastName);
-    createJobExperienceContent(jobExperienceAr);*/
 
     // SKILLS 
     document.querySelector('#show-more-skills').addEventListener('click', function () {

@@ -77,13 +77,13 @@ function styles() {
 
 
 
-// Таск для обработки JavaScript
+
 function scripts() {
-    return src('src/js/index.js')           // путь к вашему файлу index.js                   // минифицируем JS
+    return src('src/js/index.js')           
     .pipe(uglify())    
-    .pipe(rename('index.min.js'))       // переименовываем файл в index.min.js
-        .pipe(dest('dist/js/'))              // сохраняем результат в папку dist/js
-        .pipe(browserSync.stream());        // обновляем браузер при изменении
+    .pipe(rename('index.min.js'))       
+        .pipe(dest('dist/js/'))              
+        .pipe(browserSync.stream());        
 }
 
 
